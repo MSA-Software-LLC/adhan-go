@@ -1,6 +1,6 @@
 package main
 
-import "github.com/msangsoftware/adhan-go/example"
+import "github.com/MSA-Software-LLC/adhan-go/example"
 
 func main() {
 	example.CalculateNewYorkPrayers()

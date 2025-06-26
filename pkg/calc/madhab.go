@@ -1,7 +1,7 @@
 package calc
 
 import (
-	util "github.com/msangsoftware/adhan-go/pkg/util"
+	util "github.com/MSA-Software-LLC/adhan-go/pkg/util"
 )
 
 type AsrJuristicMethod int64

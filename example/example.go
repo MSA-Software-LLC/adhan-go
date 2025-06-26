@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	calc "github.com/msangsoftware/adhan-go/pkg/calc"
-	data "github.com/msangsoftware/adhan-go/pkg/data"
-	util "github.com/msangsoftware/adhan-go/pkg/util"
+	calc "github.com/MSA-Software-LLC/adhan-go/pkg/calc"
+	data "github.com/MSA-Software-LLC/adhan-go/pkg/data"
+	util "github.com/MSA-Software-LLC/adhan-go/pkg/util"
 )
 
 func CalculateNewYorkPrayers() {

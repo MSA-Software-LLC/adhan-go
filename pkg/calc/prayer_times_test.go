@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	data "github.com/msangsoftware/adhan-go/pkg/data"
-	util "github.com/msangsoftware/adhan-go/pkg/util"
+	data "github.com/MSA-Software-LLC/adhan-go/pkg/data"
+	util "github.com/MSA-Software-LLC/adhan-go/pkg/util"
 )
 
 func addSeconds(t time.Time, offset int) time.Time {

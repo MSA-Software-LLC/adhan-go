@@ -3,7 +3,7 @@ package util
 import (
 	"math"
 
-	data "github.com/msangsoftware/adhan-go/pkg/data"
+	data "github.com/MSA-Software-LLC/adhan-go/pkg/data"
 )
 
 type SolarTime struct {

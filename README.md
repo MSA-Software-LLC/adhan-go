@@ -10,7 +10,7 @@ Implementations of Adhan in other languages can be found in the parent repo [Adh
 ## Usage
 
 ### Importing
-To use this module, import it by running `go get github.com/msangsoftware/adhan-go`. View it at [pkg.go.dev](https://pkg.go.dev/github.com/msangsoftware/adhan-go).
+To use this module, import it by running `go get github.com/MSA-Software-LLC/adhan-go`. View it at [pkg.go.dev](https://pkg.go.dev/github.com/MSA-Software-LLC/adhan-go).
 
 ### Examples
 
