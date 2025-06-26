@@ -1,4 +1,4 @@
-module github.com/msangsoftware/adhan-go
+module github.com/MSA-Software-LLC/adhan-go
 
 go 1.24.3
 
