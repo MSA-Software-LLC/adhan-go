@@ -15,6 +15,9 @@ type CalculationParameters struct {
 	// Minutes after Maghrib (if set, the time for Isha will be Maghrib plus IshaInterval)
 	IshaInterval int
 
+	// The angle of the sun used to calculate maghrib (optional, for methods like Tehran)
+	MaghribAngle float64
+
 	// The juristic method used to calculate Asr
 	Madhab AsrJuristicMethod
 
@@ -41,6 +44,9 @@ type CalculationParametersBuilder struct {
 	// Minutes after Maghrib (if set, the time for Isha will be Maghrib plus IshaInterval)
 	IshaInterval int
 
+	// The angle of the sun used to calculate maghrib (optional, for methods like Tehran)
+	MaghribAngle float64
+
 	// The juristic method used to calculate Asr
 	Madhab AsrJuristicMethod
 
@@ -60,6 +66,7 @@ func NewCalculationParametersBuilder() *CalculationParametersBuilder {
 		FajrAngle:         0.0,
 		IshaAngle:         0.0,
 		IshaInterval:      0,
+		MaghribAngle:      0.0,
 		Madhab:            SHAFI_HANBALI_MALIKI,
 		HighLatitudeRule:  MIDDLE_OF_THE_NIGHT,
 		Adjustments:       PrayerAdjustments{},
@@ -84,6 +91,11 @@ func (cpb *CalculationParametersBuilder) SetIshaAngle(ishaAngle float64) *Calcul
 
 func (cpb *CalculationParametersBuilder) SetIshaInterval(ishaInterval int) *CalculationParametersBuilder {
 	cpb.IshaInterval = ishaInterval
+	return cpb
+}
+
+func (cpb *CalculationParametersBuilder) SetMaghribAngle(maghribAngle float64) *CalculationParametersBuilder {
+	cpb.MaghribAngle = maghribAngle
 	return cpb
 }
 
@@ -113,6 +125,7 @@ func (cpb *CalculationParametersBuilder) Build() *CalculationParameters {
 		FajrAngle:         cpb.FajrAngle,
 		IshaAngle:         cpb.IshaAngle,
 		IshaInterval:      cpb.IshaInterval,
+		MaghribAngle:      cpb.MaghribAngle,
 		Madhab:            cpb.Madhab,
 		HighLatitudeRule:  cpb.HighLatitudeRule,
 		Adjustments:       cpb.Adjustments,

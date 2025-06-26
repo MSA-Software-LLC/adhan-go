@@ -39,6 +39,12 @@ const (
 	// UOIF
 	// Uses a Fajr angle of 12 and an Isha angle of 12
 	UOIF
+	// Institute of Geophysics, University of Tehran
+	// Uses a Fajr angle of 17.7, Isha angle of 14, and Maghrib angle of 4.5
+	TEHRAN
+	// Dianet (Turkey)
+	// Uses a Fajr angle of 18 and an Isha angle of 17, with specific adjustments
+	TURKEY
 )
 
 func GetMethodParameters(method CalculationMethod) *CalculationParameters {
@@ -96,6 +102,19 @@ func GetMethodParameters(method CalculationMethod) *CalculationParameters {
 	case UOIF:
 		cpb.SetFajrAngle(12.0).
 			SetIshaAngle(12.0)
+	case TEHRAN:
+		cpb.SetFajrAngle(17.7).
+			SetIshaAngle(14.0).
+			SetMaghribAngle(4.5)
+	case TURKEY:
+		cpb.SetFajrAngle(18.0).
+			SetIshaAngle(17.0).
+			SetMethodAdjustments(PrayerAdjustments{
+				SunriseAdj: -7,
+				DhuhrAdj:   5,
+				AsrAdj:     4,
+				MaghribAdj: 7,
+			})
 	}
 
 	return cpb.Build()
